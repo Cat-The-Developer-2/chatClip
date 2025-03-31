@@ -1,47 +1,59 @@
-const addNotes = document.getElementById("add-notes");
-const clearNotes = document.getElementById("clear-notes");
-const noteTitle = document.getElementById("note-title");
-const noteText = document.getElementById("note-text");
-const notesList = document.getElementById("notes-list");
+document.addEventListener("DOMContentLoaded", function () {
+  const notesList = document.getElementById("notes-list");
+  const addNoteBtn = document.getElementById("add-note");
+  const noteTitleInput = document.getElementById("note-title");
+  const noteTextInput = document.getElementById("note-text");
 
-let notes = [];
-
-function saveNotes() {
-  localStorage.setItem("notes", JSON.stringify(notes));
-}
-
-function loadNotes() {
-  const savedNotes = localStorage.getItem("notes");
-  if (savedNotes) {
-    notes = JSON.parse(savedNotes);
-  }
-}
-
-function addNote() {
-  const note = {
-    title: noteTitle.value,
-    text: noteText.value,
-  };
-  notes.push(note);
-  saveNotes();
-  noteTitle.value = "";
-  noteText.value = "";
-  renderNotes();
-}
-
-function renderNotes() {
-  notesList.innerHTML = "";
-  notes.forEach((note, index) => {
-    const li = document.createElement("li");
-    li.textContent = `${index + 1}. ${note.title}: ${note.text}`;
-    notesList.appendChild(li);
+  // Load notes from storage
+  chrome.storage.sync.get("notes", function (data) {
+    if (data.notes) {
+      data.notes.forEach((note) => addNoteToUI(note));
+    }
   });
-}
 
-clearNotes.addEventListener("click", () => {
-  notes = [];
-  saveNotes();
-  renderNotes();
+  function saveNote() {
+    const title = noteTitleInput.value.trim();
+    const text = noteTextInput.value.trim();
+    if (!title || !text) return;
+
+    const newNote = { title, text };
+    chrome.storage.sync.get("notes", function (data) {
+      let notes = data.notes || [];
+      notes.push(newNote);
+      chrome.storage.sync.set({ notes }, function () {
+        addNoteToUI(newNote);
+        noteTitleInput.value = "";
+        noteTextInput.value = "";
+      });
+    });
+  }
+
+  function addNoteToUI(note) {
+    const li = document.createElement("li");
+    li.innerHTML = `<strong>${note.title}</strong><p>${note.text}</p>`;
+
+    const deleteBtn = document.createElement("button");
+    deleteBtn.textContent = "Delete";
+    deleteBtn.classList.add("delete-btn");
+    deleteBtn.onclick = function () {
+      removeNote(note);
+      li.remove();
+    };
+
+    li.appendChild(deleteBtn);
+    notesList.appendChild(li);
+  }
+
+  function removeNote(noteToRemove) {
+    chrome.storage.sync.get("notes", function (data) {
+      let notes = data.notes || [];
+      notes = notes.filter(
+        (note) =>
+          note.title !== noteToRemove.title || note.text !== noteToRemove.text
+      );
+      chrome.storage.sync.set({ notes });
+    });
+  }
+
+  addNoteBtn.addEventListener("click", saveNote);
 });
-
-addNotes.addEventListener("click", addNote);

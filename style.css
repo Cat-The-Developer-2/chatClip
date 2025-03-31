@@ -1,57 +1,96 @@
 body {
-  font-family: Arial, sans-serif;
-  padding: 10px;
-  width: 250px;
+  font-family: "Poppins", sans-serif;
+  background-color: #f9f9f9;
+  padding: 15px;
+  width: 500px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
 }
 
 h1 {
-  font-size: 18px;
+  font-size: 20px;
   text-align: center;
+  color: #333;
+  margin-bottom: 10px;
 }
 
-ul {
-  list-style-type: none;
-  padding: 0;
+.note-input {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background: white;
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  box-sizing: border-box;
 }
 
-li {
-  background: #f3f3f3;
-  padding: 5px;
-  margin: 5px 0;
+input,
+textarea {
+  width: calc(100% - 16px);
+  padding: 8px;
+  border: 1px solid #ddd;
   border-radius: 5px;
+  font-size: 14px;
+  box-sizing: border-box;
+}
+
+textarea {
+  min-height: 60px;
+  resize: none;
 }
 
 button {
-  display: block;
-  width: 100%;
-  padding: 10px;
-  margin-top: 10px;
   background: #007bff;
   color: white;
   border: none;
-  cursor: pointer;
+  padding: 8px;
   border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 button:hover {
   background: #0056b3;
 }
 
-div {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
+ul {
+  list-style-type: none;
+  padding: 0;
   margin-top: 10px;
 }
 
-input {
-  padding: 5px;
-  border-radius: 5px;
-  border: 1px solid #007bff;
+li {
+  background: white;
+  padding: 10px;
+  margin: 5px 0;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  box-sizing: border-box;
 }
 
-textarea {
-  padding: 5px;
+.delete-btn {
+  background: #dc3545;
+  color: white;
+  border: none;
+  padding: 5px 8px;
+  cursor: pointer;
   border-radius: 5px;
-  border: 1px solid #007bff;
+  font-size: 12px;
+  transition: background 0.3s;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.delete-btn:hover {
+  background: #a71d2a;
 }
