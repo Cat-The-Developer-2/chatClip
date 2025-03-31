@@ -1,0 +1,18 @@
+{
+  "manifest_version": 3,
+  "name": "ChatClip",
+  "version": "1.0",
+  "description": "Save parts of your ChatGPT conversation as notes.",
+  "permissions": ["storage", "contextMenus"],
+  "background": {
+    "service_worker": "script.js"
+  },
+  "action": {
+    "default_popup": "index.html",
+    "default_icon": {
+      "16": "clip.png",
+      "48": "clip.png",
+      "128": "clip.png"
+    }
+  }
+}

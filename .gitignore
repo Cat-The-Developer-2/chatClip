@@ -1,0 +1,17 @@
+# Ignore system files
+.DS_Store
+Thumbs.db
+
+# Ignore node dependencies (if added later)
+node_modules/
+npm-debug.log
+
+# Ignore build files
+/dist/
+/build/
+
+# Ignore VS Code settings
+.vscode/
+
+# Ignore Chrome Extension local storage
+chrome-extension/
