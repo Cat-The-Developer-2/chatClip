@@ -90,7 +90,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // File Upload and OCR Processing
   async function handleFileUpload() {
-    const API_KEY = "AIzaSyBJvbNDMrIIo6R_8cElq3TD_H6Ra0onpAY"; // Replace with your actual API key!
+    const API_KEY = prompt("Enter your gemini API key"); // Replace with your actual API key!
     const URL = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${API_KEY}`;
 
     const file = fileInput.files[0];
