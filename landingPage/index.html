@@ -11,18 +11,20 @@
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
-    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="icon" href="favicon.svg" type="image/svg+xml" />
   </head>
   <body>
+    <!-- Header Section -->
     <header>
-      <nav class="container">
+      <div class="container">
         <div class="logo">
           <img src="logo.svg" alt="ChatClip Logo" />
-          <span>ChatClip</span>
+          <h1>ChatClip</h1>
         </div>
         <div class="nav-links">
           <a href="#features">Features</a>
-          <a href="#benefits">Benefits</a>
+          <a href="#how-to-use">How to Use</a>
+          <a href="#setup">Setup</a>
           <a href="#contribute">Contribute</a>
           <a
             href="https://github.com/Cat-The-Developer-2/chatClip"
@@ -33,233 +35,390 @@
             GitHub
           </a>
         </div>
-        <button class="menu-toggle" aria-label="Toggle menu">
-          <i data-lucide="menu"></i>
-        </button>
-      </nav>
+      </div>
     </header>
 
-    <main>
-      <!-- Hero Section -->
-      <section class="hero">
-        <div class="container">
-          <div class="hero-content">
-            <h1>Save ChatGPT Conversations with One Click</h1>
-            <p>
-              ChatClip helps you clip, organize, and reference important parts
-              of your AI conversations - never lose that perfect response again.
-            </p>
-            <div class="cta-buttons">
-              <a href="#" class="btn btn-primary">
-                <i data-lucide="download"></i>
-                Download Extension
-              </a>
-              <a href="#features" class="btn btn-secondary">Learn More</a>
-            </div>
-          </div>
-          <div class="hero-image">
-            <img src="hero-image.svg" alt="ChatClip in action" />
-          </div>
-        </div>
-      </section>
-
-      <!-- How It Works Section -->
-      <section class="features" id="features">
-        <div class="container">
-          <h2>How ChatClip Works</h2>
-          <p class="section-description">
-            Simple, intuitive, and powerful - clip what matters in just a few
-            clicks.
-          </p>
-
-          <div class="feature-grid">
-            <div class="feature-card">
-              <div class="feature-icon">
-                <i data-lucide="scissors"></i>
-              </div>
-              <h3>Clip Conversations</h3>
-              <p>
-                Select any part of your ChatGPT conversation and save it with a
-                single click.
-              </p>
-            </div>
-
-            <div class="feature-card">
-              <div class="feature-icon">
-                <i data-lucide="folder"></i>
-              </div>
-              <h3>Organize & Tag</h3>
-              <p>
-                Create collections and add tags to keep your clips organized by
-                topic or project.
-              </p>
-            </div>
-
-            <div class="feature-card">
-              <div class="feature-icon">
-                <i data-lucide="search"></i>
-              </div>
-              <h3>Quick Search</h3>
-              <p>
-                Find any saved clip instantly with powerful search
-                functionality.
-              </p>
-            </div>
-
-            <div class="feature-card">
-              <div class="feature-icon">
-                <i data-lucide="cloud"></i>
-              </div>
-              <h3>Sync Across Devices</h3>
-              <p>
-                Your clips are synced to your account, accessible from any
-                device with Chrome.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Why Use ChatClip Section -->
-      <section class="benefits" id="benefits">
-        <div class="container">
-          <h2>Why Use ChatClip?</h2>
-          <p class="section-description">
-            ChatClip transforms how you work with AI conversations.
-          </p>
-
-          <div class="benefits-container">
-            <div class="benefits-content">
-              <div class="benefit-item">
-                <i data-lucide="clock"></i>
-                <div>
-                  <h3>Save Time</h3>
-                  <p>
-                    No more scrolling through long conversations to find that
-                    one perfect response.
-                  </p>
-                </div>
-              </div>
-
-              <div class="benefit-item">
-                <i data-lucide="brain"></i>
-                <div>
-                  <h3>Boost Productivity</h3>
-                  <p>
-                    Build a personal knowledge base of AI-generated solutions
-                    and ideas.
-                  </p>
-                </div>
-              </div>
-
-              <div class="benefit-item">
-                <i data-lucide="share-2"></i>
-                <div>
-                  <h3>Easy Sharing</h3>
-                  <p>
-                    Share specific clips with colleagues without sending entire
-                    conversations.
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            <div class="benefits-image">
-              <img
-                src="benefits-image.svg"
-                alt="ChatClip benefits illustration"
-              />
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Contribute Section -->
-      <section class="contribute" id="contribute">
-        <div class="container">
-          <h2>Open Source & Community Driven</h2>
-          <p class="section-description">
-            ChatClip is built by the community, for the community.
-          </p>
-
-          <div class="contribute-content">
-            <div class="contribute-card">
-              <i data-lucide="github"></i>
-              <h3>Contribute on GitHub</h3>
-              <p>
-                ChatClip is open-source and welcomes contributions from
-                developers of all skill levels.
-              </p>
-              <a
-                href="https://github.com/Cat-The-Developer-2/chatclip"
-                class="btn btn-primary"
-                target="_blank"
-                >View on GitHub</a
-              >
-            </div>
-
-            <div class="contribute-card">
-              <i data-lucide="star"></i>
-              <h3>Feature Requests</h3>
-              <p>
-                Have an idea to make ChatClip better? Submit a feature request
-                on our GitHub page.
-              </p>
-              <a
-                href="https://github.com/Cat-The-Developer-2/chatclip/issues"
-                class="btn btn-secondary"
-                target="_blank"
-                >Submit Request</a
-              >
-            </div>
-          </div>
-        </div>
-      </section>
-    </main>
-
-    <footer>
+    <!-- Hero Section -->
+    <section class="hero">
       <div class="container">
-        <div class="footer-content">
-          <div class="footer-logo">
-            <img src="logo.svg" alt="ChatClip Logo" />
-            <span>ChatClip</span>
-          </div>
-          <p>A simple way to save and organize your ChatGPT conversations.</p>
+        <div class="hero-content">
+          <h1>Save and Organize Your ChatGPT Conversations</h1>
+          <p>
+            ChatClip is a browser extension that lets you clip, save, and
+            organize your ChatGPT conversations with ease.
+          </p>
+          <a href="#setup" class="btn btn-primary">
+            <i data-lucide="download"></i>
+            Add to Chrome
+          </a>
         </div>
-        <div class="footer-links">
-          <div class="footer-links-column">
-            <h4>Product</h4>
-            <a href="#features">Features</a>
-            <a href="#benefits">Benefits</a>
-            <a href="#">Privacy</a>
+        <div class="hero-image">
+          <img src="hero-image.svg" alt="ChatClip Interface" />
+        </div>
+      </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features" id="features">
+      <div class="container">
+        <h2>Key Features</h2>
+        <p class="section-description">
+          Discover the features that make ChatClip the perfect tool for managing
+          your ChatGPT conversations.
+        </p>
+
+        <div class="features-grid">
+          <div class="feature-item">
+            <div class="step-icon">
+              <i data-lucide="scissors"></i>
+            </div>
+            <h3>Clip Conversations</h3>
+            <p>
+              Easily clip and save important parts of your ChatGPT conversations
+              with a single click.
+            </p>
           </div>
-          <div class="footer-links-column">
-            <h4>Community</h4>
-            <a href="https://github.com/Cat-The-Developer-2/chatclip/issues"
-              >Contribute</a
-            >
-            <a
-              href="https://github.com/Cat-The-Developer-2/chatclip"
-              target="_blank"
-              >GitHub</a
-            >
-            <a href="https://github.com/Cat-The-Developer-2/chatclip/issues"
-              >Report Bug</a
-            >
+
+          <div class="feature-item">
+            <div class="step-icon">
+              <i data-lucide="folder"></i>
+            </div>
+            <h3>Organize with Folders</h3>
+            <p>
+              Create folders and subfolders to categorize your clips and keep
+              everything organized.
+            </p>
+          </div>
+
+          <div class="feature-item">
+            <div class="step-icon">
+              <i data-lucide="search"></i>
+            </div>
+            <h3>Powerful Search</h3>
+            <p>
+              Quickly find specific clips using our powerful search
+              functionality.
+            </p>
+          </div>
+
+          <div class="feature-item">
+            <div class="step-icon">
+              <i data-lucide="tag"></i>
+            </div>
+            <h3>Tagging System</h3>
+            <p>
+              Add tags to your clips for even more granular organization and
+              search capabilities.
+            </p>
+          </div>
+
+          <div class="feature-item">
+            <div class="step-icon">
+              <i data-lucide="cloud"></i>
+            </div>
+            <h3>Cloud Sync</h3>
+            <p>Your saved clips are sync across all chrome browsers.</p>
+          </div>
+
+          <div class="feature-item">
+            <div class="step-icon">
+              <i data-lucide="cpu"></i>
+            </div>
+            <h3>AI Powered</h3>
+            <p>
+              Automatically extracts text from conversation screenshots, creates
+              titles, and organizes content intelligently.
+            </p>
           </div>
         </div>
       </div>
-      <div class="footer-bottom">
-        <div class="container">
-          <p>&copy; 2024 ChatClip. All rights reserved.</p>
+    </section>
+
+    <!-- How to Use Section -->
+    <section class="how-to-use" id="how-to-use">
+      <div class="container">
+        <h2>How to Use ChatClip</h2>
+        <p class="section-description">
+          Get started with ChatClip in just a few simple steps.
+        </p>
+
+        <div class="steps-container">
+          <div class="step-card">
+            <div class="step-number">1</div>
+            <div class="step-icon">
+              <i data-lucide="message-square"></i>
+            </div>
+            <h3>Start a Conversation</h3>
+            <p>Begin chatting with ChatGPT as you normally would.</p>
+          </div>
+
+          <div class="step-card">
+            <div class="step-number">2</div>
+            <div class="step-icon">
+              <i data-lucide="image-up"></i>
+            </div>
+            <h3>Take Screenshot and Upload</h3>
+            <p>
+              Take a screenshot of the conversation and upload it to ChatClip.
+            </p>
+          </div>
+
+          <div class="step-card">
+            <div class="step-number">3</div>
+            <div class="step-icon">
+              <i data-lucide="pen"></i>
+            </div>
+            <h3>or Use our Manual notes writing</h3>
+            <p>Write your own notes and save them to ChatClip.</p>
+          </div>
+
+          <div class="step-card">
+            <div class="step-number">4</div>
+            <div class="step-icon">
+              <i data-lucide="check-circle"></i>
+            </div>
+            <h3>Access Your Clips</h3>
+            <p>View and manage your saved clips from the extension popup.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- How to Setup Section -->
+    <section class="setup" id="setup">
+      <div class="container">
+        <h2>How to Setup ChatClip</h2>
+        <p class="section-description">
+          I cannot pay 5$ for registration fee to publish in web store but this
+          will not stop me this extension is free, open source and will always
+          be free.
+        </p>
+
+        <div class="setup-container">
+          <div class="setup-steps">
+            <div class="setup-step">
+              <div class="setup-step-icon">
+                <i data-lucide="download"></i>
+              </div>
+              <div class="setup-step-content">
+                <h3>1. Download the extension</h3>
+                <p>link the button below to download the extension.</p>
+                <a
+                  href="/chatClip.zip"
+                  class="btn btn-primary"
+                  download
+                  target="_blank"
+                >
+                  <i data-lucide="download"></i>
+                  Download Extension
+                </a>
+              </div>
+            </div>
+
+            <div class="setup-step">
+              <div class="setup-step-icon">
+                <i data-lucide="folder"></i>
+              </div>
+              <div class="setup-step-content">
+                <h3>2. Extract the zip file</h3>
+                <p>Extract the zip file.</p>
+              </div>
+            </div>
+
+            <div class="setup-step">
+              <div class="setup-step-icon">
+                <i data-lucide="cable"></i>
+              </div>
+              <div class="setup-step-content">
+                <h3>3. Go to chrome://extensions/</h3>
+                <p>
+                  look at top right corner and turn on developer mode and Click
+                  on "load unpacked" and select the folder you extracted the zip
+                  file to.
+                </p>
+                <a
+                  href="https://superuser.com/questions/247651/how-does-one-install-an-extension-for-chrome-browser-from-the-local-file-system"
+                  target="_blank"
+                  class="btn btn-secondary"
+                >
+                  Learn More
+                </a>
+              </div>
+            </div>
+
+            <div class="setup-step">
+              <div class="setup-step-icon">
+                <i data-lucide="pin"></i>
+              </div>
+              <div class="setup-step-content">
+                <h3>4. Pin the extension</h3>
+                <p>
+                  Pin the extension to the top right corner of your browser.
+                </p>
+              </div>
+            </div>
+
+            <div class="setup-step">
+              <div class="setup-step-icon">
+                <i data-lucide="zap"></i>
+              </div>
+              <div class="setup-step-content">
+                <h3>5. and all set!</h3>
+                <p>
+                  You're all set! Visit ChatGPT and start saving your
+                  conversations.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="setup-image">
+            <img src="setup-image.svg" alt="ChatClip setup illustration" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <!-- <section class="benefits" id="benefits">
+      <div class="container">
+        <h2>Why Use ChatClip?</h2>
+        <p class="section-description">
+          Discover the benefits of using ChatClip to manage your ChatGPT
+          conversations.
+        </p>
+
+        <div class="benefits-grid">
+          <div class="benefit-item">
+            <i data-lucide="clock"></i>
+            <div>
+              <h3>Save Time</h3>
+              <p>
+                Quickly save and organize your conversations, eliminating the
+                need to manually copy and paste.
+              </p>
+            </div>
+          </div>
+
+          <div class="benefit-item">
+            <i data-lucide="layout"></i>
+            <div>
+              <h3>Stay Organized</h3>
+              <p>
+                Keep your conversations organized with folders, tags, and a
+                powerful search function.
+              </p>
+            </div>
+          </div>
+
+          <div class="benefit-item">
+            <i data-lucide="cpu"></i>
+            <div>
+              <h3>AI Powered</h3>
+              <p>
+                Automatically extracts text from conversation screenshots,
+                creates titles, and organizes content intelligently.
+              </p>
+            </div>
+          </div>
+
+          <div class="benefit-item">
+            <i data-lucide="users"></i>
+            <div>
+              <h3>Collaborate Easily</h3>
+              <p>
+                Share your conversations with colleagues and friends for
+                seamless collaboration.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section> -->
+
+    <!-- Contribute Section -->
+    <section class="contribute" id="contribute">
+      <div class="container">
+        <h2>Contribute to ChatClip</h2>
+        <p class="section-description">
+          Help us make ChatClip even better by contributing to the project.
+        </p>
+
+        <div class="contribute-options">
+          <a
+            href="https://github.com/Cat-The-Developer-2/chatClip"
+            class="btn btn-primary"
+            target="_blank"
+          >
+            <i data-lucide="github"></i>
+            Contribute on GitHub
+          </a>
+          <a
+            href="https://github.com/Cat-The-Developer-2/chatClip/issues"
+            class="btn btn-secondary"
+          >
+            <i data-lucide="bug"></i>
+            Report a Bug
+          </a>
+          <a
+            href="https://github.com/Cat-The-Developer-2/chatClip/issues"
+            class="btn btn-secondary"
+          >
+            <i data-lucide="lightbulb"></i>
+            Suggest a Feature
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+      <div class="container">
+        <div class="footer-columns">
+          <div class="footer-links-column">
+            <h4>Product</h4>
+            <a href="#features">Features</a>
+            <a href="#how-to-use">How to Use</a>
+            <a href="#setup">Setup</a>
+          </div>
+
+          <div class="footer-links-column">
+            <h4>Support</h4>
+            <a href="#">FAQ</a>
+            <a href="#">Contact Us</a>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms of Service</a>
+          </div>
+
+          <div class="footer-links-column">
+            <h4>Connect</h4>
+            <a href="https://x.com/CNinja22936">Twitter</a>
+            <a href="#">LinkedIn</a>
+            <a href="https://github.com/Cat-The-Developer-2">GitHub</a>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <p>&copy; 2025 ChatClip. All rights reserved.</p>
         </div>
       </div>
     </footer>
 
-    <script src="script.js"></script>
+    <!-- Include Lucide Icons -->
+    <script src="https://cdn.jsdelivr.net/npm/lucide@latest/dist/umd/lucide.min.js"></script>
+
     <script>
-      // Initialize Lucide icons
-      lucide.createIcons();
+      document.addEventListener("DOMContentLoaded", function () {
+        if (typeof lucide !== "undefined") {
+          lucide.createIcons();
+        } else {
+          console.error(
+            "Lucide is not defined. Make sure the script is properly loaded."
+          );
+        }
+      });
     </script>
+
+    <script src="script.js"></script>
   </body>
 </html>

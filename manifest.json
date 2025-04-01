@@ -3,10 +3,16 @@
   "name": "ChatClip",
   "version": "1.0",
   "description": "Save parts of your ChatGPT conversation as notes.",
-  "permissions": ["storage", "contextMenus"],
+  "permissions": ["storage", "contextMenus", "tabs", "unlimitedStorage"],
   "background": {
     "service_worker": "script.js"
   },
+  "content_scripts": [
+    {
+      "matches": ["https://chatgpt.com/*"],
+      "js": ["script.js"]
+    }
+  ],
   "action": {
     "default_popup": "index.html",
     "default_icon": {

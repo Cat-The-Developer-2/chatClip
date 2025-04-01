@@ -5,15 +5,39 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>ChatClip</title>
     <link rel="stylesheet" href="style.css" />
+    <script src="./axios.min.js"></script>
   </head>
   <body>
-    <h1>ChatClip Notes</h1>
+    <nav class="navbar">
+      <h1>ChatClip Notes</h1>
+      <div class="poweredBy">
+        <p>Powered by</p>
+        <img alt="gemini" src="./gemini.png" />
+      </div>
+    </nav>
+
     <div class="note-input">
-      <input type="text" id="note-title" placeholder="Note Title" />
-      <textarea id="note-text" placeholder="Note Text"></textarea>
-      <button id="add-note">Add Note</button>
+      <input type="file" id="file-input" accept="image/*" />
+      <img id="preview-image" alt="preview" />
+      <button id="upload-btn">Upload</button>
     </div>
+
+    <h4 id="ifLoading"></h4>
+
+    <div class="note-input" style="margin-top: 10px">
+      <input type="text" id="note-title" placeholder="Title" />
+      <textarea id="note-text" placeholder="Note"></textarea>
+
+      <button id="save-btn">Save</button>
+      <button id="clear-btn">Clear</button>
+    </div>
+
+    <div class="search-container">
+      <input type="text" id="search-input" placeholder="Search" />
+    </div>
+
     <ul id="notes-list"></ul>
+
     <script src="script.js"></script>
   </body>
 </html>
