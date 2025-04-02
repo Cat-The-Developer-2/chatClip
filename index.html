@@ -24,16 +24,37 @@
       <input type="text" id="note-title" placeholder="Title" />
       <textarea id="note-text" placeholder="Note"></textarea>
 
-      <button id="save-btn">Save</button>
-      <button id="clear-btn">Clear</button>
+      <div class="tag-section">
+        <input
+          type="text"
+          id="tag-input"
+          placeholder="Enter new tags (comma-separated)"
+        />
+        <button id="create-tag-btn">Create Tag</button>
+        <select id="existing-tags">
+          <option value="">Select existing tag</option>
+        </select>
+      </div>
+
+      <div class="btnGroup">
+        <button id="save-btn">Save</button>
+        <button id="clear-btn">Clear</button>
+      </div>
     </div>
 
-    <div class="search-container">
-      <input type="text" id="search-input" placeholder="Search" />
+    <div class="note-input" style="margin-top: 10px">
+      <div class="search-container">
+        <input type="text" id="search-input" placeholder="Search" />
+      </div>
+
+      <select id="filter-tags">
+        <option value="">All</option>
+      </select>
     </div>
 
     <ul id="notes-list"></ul>
 
+    <script src="axios.min.js"></script>
     <script src="script.js"></script>
   </body>
 </html>

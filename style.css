@@ -12,30 +12,14 @@ body {
 .navbar {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-}
-
-.navbar img {
-  width: 70px;
-}
-
-.poweredBy {
-  display: flex;
-  align-items: center;
   justify-content: center;
+  padding: 10px 0;
 }
 
-h1 {
+.navbar h1 {
   font-size: 20px;
   text-align: center;
-  color: #333;
-  margin-bottom: 10px;
-}
-
-#preview-image {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+  margin: 0;
 }
 
 .note-input {
@@ -51,8 +35,9 @@ h1 {
 }
 
 input,
-textarea {
-  width: calc(100% - 16px);
+textarea,
+select {
+  width: 100%;
   padding: 8px;
   border: 1px solid #ddd;
   border-radius: 5px;
@@ -66,19 +51,17 @@ textarea {
 }
 
 button {
-  background: #007bff;
+  background: #4f46e5;
   color: white;
   border: none;
   padding: 8px;
   border-radius: 5px;
   cursor: pointer;
   transition: background 0.3s;
-  width: 100%;
-  box-sizing: border-box;
 }
 
 button:hover {
-  background: #0056b3;
+  background: #443dc8;
 }
 
 ul {
@@ -90,7 +73,7 @@ ul {
 li {
   background: white;
   padding: 10px;
-  margin: 5px 0;
+  margin: 10px 0;
   border-radius: 8px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   display: flex;
@@ -123,6 +106,26 @@ li {
   margin-top: 10px;
 }
 
-li img {
+.search-container input {
   width: 100%;
+}
+
+.btnGroup {
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.tag-section {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+#filter-tags,
+#existing-tags {
+  display: block;
+  margin-top: 10px;
 }
